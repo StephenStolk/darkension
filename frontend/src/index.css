@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Titillium+Web:ital,wght@0,400;0,600;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+      /* background-color: rgb(193, 193, 193); */
+      /* background-color: rgb(220, 220, 231); */
+      /* background-color: rgb(232, 231, 229); */
+      background-color: rgb(16, 16, 16);
+  }
+ 
+}
+@layer components {
+  .txt {
+    font-family: Oswald;
+  }
+  .bg {
+    background-image: url("/front2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bg-pad:first-child {
+     margin-top: 5%;
+  }
+
+  .bg-pad:last-child {
+    margin-bottom: 15%;
+  }
+
+  .bgspan {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .bgborder {
+    margin-top: 1%;
+    border-radius: 5%;
+    border-bottom-right-radius: 12rem;
+    border-bottom-left-radius: 3rem;
+  }
+
+  .bgborder2 {
+    border-radius: 2rem;
+  }
+
+  .bglaunch {
+    border-radius: 3rem;
+  }
+
+  .grp-dates {
+     @apply text-4xl text-gray-300 px-3 py-4 font-bold traacking-widest
+  }
+
+  .timeline {
+    @apply border-l-4 border-gray-200 ml-3 mt-3 py-16 space-y-14
+  }
+
+  .dot {
+    @apply absolute top-5 -left-3.5 bg-blue-400 h-6 w-6 rounded-full border-4 border-white
+  }
+}
+
+/* @layer base {
+  li {
+    padding-top: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+  }
+} */
