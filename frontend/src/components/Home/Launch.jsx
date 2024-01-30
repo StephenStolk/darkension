@@ -10,29 +10,29 @@ const Launch = () => {
         <div className="flex flex-col justify-around lg:mb-0 mb-[3rem]">
         <div className="flex sm:justify-evenly sm:flex-row flex-col justify-center lg:my-0 my-[2rem]">
           <motion.div variants={fadeIn2(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}}className="md:w-[40%] flex flex-col mx-[1rem] bg-gradient-to-r from-gray-700 to-gray-500 px-[5%] bgborder2 py-[4%] shadow-xl hover:bg-gray-600 hover:cursor-pointer">
-          <h1 className="text-2xl mb-[0.5rem] text-white txt">Get it ready.</h1>
+          <h1 className="text-2xl mb-[0.5rem] text-white txt">MODEL</h1>
             <h1 className="text-md text-gray-300 txt">
-              With all of your app settings, permissions, and code review.
+              Predicts your all dark patterns.
             </h1>
           </motion.div>
           <motion.div variants={fadeIn4(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className="md:w-[40%] flex flex-col mx-[1rem] bg-gradient-to-r from-gray-700 to-gray-500  px-[5%] bgborder2 py-[4%] shadow-xl hover:bg-sky-200 hover:cursor-pointer">
-          <h1 className="text-2xl mb-[0.5rem] text-white txt">Get it ready.</h1>
+          <h1 className="text-2xl mb-[0.5rem] text-white txt">NLP</h1>
             <h1 className="text-md text-gray-300 txt">
-              With all of your app settings, permissions, and code review.
+              Cross verification system based on trained NLP.
             </h1>
           </motion.div>
           </div>
           <div className="flex md:flex-row flex-col justify-around">
           <motion.div variants={fadeIn(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className="md:w-[40%] flex flex-col mx-[1rem] bg-gradient-to-r from-gray-700 to-gray-500 px-[5%] bgborder2 py-[4%] shadow-xl hover:bg-sky-200 hover:cursor-pointer">
-            <h1 className="text-2xl mb-[0.5rem] text-white txt">Get it ready.</h1>
+            <h1 className="text-2xl mb-[0.5rem] text-white txt">Cross Browser Compatibility</h1>
             <h1 className="text-md text-gray-300 txt">
-              With all of your app settings, permissions, and code review.
+              Seamless integration and access accross all major browsers
             </h1>
           </motion.div>
           <motion.div variants={fadeIn3(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className="md:w-[40%] flex flex-col mx-[1rem] bg-gradient-to-r from-gray-700 to-gray-500 px-[5%] bgborder2 py-[4%] shadow-xl hover:cursor-pointer">
-          <h1 className="text-2xl mb-[0.5rem] text-white txt">Get it ready.</h1>
+          <h1 className="text-2xl mb-[0.5rem] text-white txt">Deploy locally</h1>
             <h1 className="text-md text-gray-300 txt">
-              With all of your app settings, permissions, and code review.
+              Download and host your own model based on your requirements.
             </h1>
           </motion.div>
           </div>

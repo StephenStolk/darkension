@@ -24,7 +24,7 @@ const Footer = () => {
               <button type="submit" className='bg-purple-400 rounded-xl p-[0.5rem] w-[full] mt-[1rem] hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white  text-lg'>
                     <a href='https://drive.google.com/drive/folders/1lLn2nrHmyv8JQVgdrySSczN_LreM0xTH' target='_blank'>Download</a>
                 </button>
-                <button className='w-[full] flex mx-auto border p-[0.5rem] rounded-xl text-lg font-semibold mt-[1rem] bg-sky-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white  px-[15%]'>
+                <button className='w-[full] flex mx-auto border p-[0.5rem] rounded-xl text-lg font-semibold mt-[1rem] bg-sky-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white px-[15%] mb-[2rem]'>
                 Get Started <FaArrowRightLong className='w-[3rem] flex items-center m-auto' />
             </button>
                </div>

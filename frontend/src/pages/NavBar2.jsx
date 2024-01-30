@@ -36,17 +36,17 @@ const NavBar2 = () => {
   };
   return (
     <>
-      <nav variants={variants} className="bg-gradient-to-r from-gray-950 to-gray-800 w-[100%] fixed top-0 left-0 shadow-lg overflow-hidden">
+      <nav variants={variants} className="bg-gradient-to-r from-gray-950 to-gray-800 w-[full] fixed top-0 left-0 right-0 shadow-lg overflow-hidden">
         <div className="mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex">
-            <img src="logo2.png" className="w-[4rem] h-[4rem]"></img>
-              <a href="/" className="md:text-3xl m-auto font-bold font-cursive ml-[1rem] text-white txt">
+            <img src="logo2.png" className="w-[3rem] md:w-[4rem] h-[3rem] md:h-[4rem]"></img>
+              <a href="/" className="text-lg md:text-3xl m-auto font-bold font-cursive ml-[1rem] text-white txt">
                 DARKENSION
               </a>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
+              <div className="ml-10 flex items-center space-x-4">
                 {navlinks.map((link, index) => (
                   <Link
                     key={index}
