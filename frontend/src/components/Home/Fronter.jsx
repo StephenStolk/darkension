@@ -12,21 +12,21 @@ const Fronter = () => {
        </motion.div>
        <div className='w-full lg:w-3/4 flex lg:flex-row flex-col justify-around lg:pb-0 pb-[15%]'>
         <motion.div variants={fadeIn3(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col lg:w-[28%] w-[85%] bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mx-auto'>
-            <img src="f1.png" alt="" className='w-[30%] lg:w-[85%] mx-auto flex'></img>
+            <img src="./public/f1.png" alt="" className='w-[30%] lg:w-[85%] mx-auto flex'></img>
             <p className="mt-[1rem] p-[2rem] text-md text-gray-100">
                Cross Browser Compatibility ensures integration accross all platforms.
             </p>
 
         </motion.div>
         <motion.div variants={fadeIn(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}}  className='flex flex-col lg:w-[28%] w-[85%] bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mt-[2rem] mx-auto'>
-            <img src="f1.png" alt="" className='w-[85%] mx-auto flex'></img>
+            <img src="./public/f1.png" alt="" className='w-[85%] mx-auto flex'></img>
             <p className="mt-[1rem] p-[2rem] text-gray-100">
                 97% accuracy model to predict the data via integration with NLP.
             </p>
 
         </motion.div>
         <motion.div variants={fadeIn3(4.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}}  className='flex flex-col lg:w-[28%] w-[85%] bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mx-auto mt-[2rem]'>
-            <img src="f1.png" alt="" className='w-[85%] mx-auto flex'></img>
+            <img src="./public/f1.png" alt="" className='w-[85%] mx-auto flex'></img>
             <p className="text-gray-100 mt-[1rem] p-[2rem]">
                Specially resolving 23 dark patterns including popups.
             </p>
