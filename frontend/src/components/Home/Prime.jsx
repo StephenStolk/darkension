@@ -12,7 +12,7 @@ const Prime = () => {
                 </span>
             </motion.div>
             <motion.div variants={fadeIn(7.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex'>
-                <img src='f2.png' className='w-[50%] lg:w-[100%] lg:h-[35rem] h-[10rem]'></img>
+                <img src='https://github.com/StephenStolk/darkension/blob/7e5b77cc4a7aa8c3b8a51ddcda98f8f6fd3047dd/frontend/public/f2.png' className='w-[50%] lg:w-[100%] lg:h-[35rem] h-[10rem]'></img>
             </motion.div>
         </div>
     </section>
