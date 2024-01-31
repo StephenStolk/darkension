@@ -5,7 +5,7 @@ const Benefit = () => {
   return (
     <>
         <section className="w-full md:w-[90%] flex mx-auto justify-evenly py-[10%] overflow-hidden">
-            <img src="/public/benefit.png" className="w-[35%] hover:cursor-pointer hover:scale-105 transition ease-in-out delay-150"></img>
+            <img src="benefit.png" className="w-[35%] hover:cursor-pointer hover:scale-105 transition ease-in-out delay-150"></img>
             <motion.div variants={fadeIn4(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='w-[60%] flex flex-col justify-start pl-[10%]'>
                 <h1 className='text-2xl mb-[2%] text-purple-600 font-semibold'>
                     BUILD

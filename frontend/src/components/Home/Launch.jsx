@@ -40,7 +40,7 @@ const Launch = () => {
           
         </div>
         <motion.div variants={fadeIn4(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className="flex">
-        <img src="./public/loading.png" className="flex m-auto "></img>
+        <img src="loading.png" className="flex m-auto "></img>
         </motion.div>
       </section>
     </>
