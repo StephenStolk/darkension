@@ -26,11 +26,10 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <NavItem to="/home" icon={<FaHome />}>Home</NavItem>
-                <NavItem to="/publication" icon={<FaBook />}>Publication</NavItem>
-                <NavItem to="/dark-patterns" icon={<FaMoon />}>Dark Patterns</NavItem>
-                <NavItem to="/the-project" icon={<FaProjectDiagram />}>The Project</NavItem>
-                <NavItem to="/feedback" icon={<FaCommentAlt />}>Feedback</NavItem>
+                <NavItem to="/home">Home</NavItem>
+                <NavItem to="/publication">Publication</NavItem>
+                <NavItem to="/dark-patterns">Dark Patterns</NavItem>
+                <NavItem to="/feedback">Feedback</NavItem>
               </div>
             </div>
           </div>
@@ -61,7 +60,6 @@ const Navbar = () => {
               <MobileNavItem to="/home">Home</MobileNavItem>
               <MobileNavItem to="/publication">Publication</MobileNavItem>
               <MobileNavItem to="/dark-patterns">Dark Patterns</MobileNavItem>
-              <MobileNavItem to="/the-project">The Project</MobileNavItem>
               <MobileNavItem to="/feedback">Feedback</MobileNavItem>
             </div>
           </motion.div>
