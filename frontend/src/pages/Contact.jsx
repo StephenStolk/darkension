@@ -38,7 +38,7 @@ const Contact = () => {
             Please fill out the form to reach out to us.
           </span>
           <motion.img
-            src="./public/contact.jpg"
+            src="contact.jpg"
             className="w-3/4 lg:w-5/6 mx-auto mt-10 mb-5 lg:mb-0"
             alt="image" variants={fadeIn2(2.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}
           />
