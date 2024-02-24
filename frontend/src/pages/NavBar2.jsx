@@ -26,7 +26,7 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <NavItem to="/home">Home</NavItem>
+                <NavItem to="/">Home</NavItem>
                 <NavItem to="/publication">Publication</NavItem>
                 <NavItem to="/dark-patterns">Dark Patterns</NavItem>
                 <NavItem to="/feedback">Feedback</NavItem>
@@ -57,7 +57,7 @@ const Navbar = () => {
             className="md:hidden flex flex-col items-center justify-center w-full"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <MobileNavItem to="/home">Home</MobileNavItem>
+              <MobileNavItem to="/">Home</MobileNavItem>
               <MobileNavItem to="/publication">Publication</MobileNavItem>
               <MobileNavItem to="/dark-patterns">Dark Patterns</MobileNavItem>
               <MobileNavItem to="/feedback">Feedback</MobileNavItem>

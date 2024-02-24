@@ -15,7 +15,7 @@ const App = () => {
       <NavBar2 />
       
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/dark-patterns" element={<DarkPattern2 />} />
         <Route path="/publication" element={<Publication />} />
         <Route path="/feedback" element={<Contact />} />
