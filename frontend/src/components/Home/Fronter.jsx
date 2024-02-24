@@ -1,39 +1,37 @@
+/* eslint-disable no-unused-vars */
+
 import React from 'react'
-import { fadeIn,fadeOut, fadeIn2, fadeIn3 } from '../Motion/variants'
-import { motion } from 'framer-motion'
+import { fadeIn,fadeIn2,fadeIn3,fadeIn4 } from '../Motion/variants'
+import {motion} from "framer-motion";
 const Fronter = () => {
   return (
-    <section className='w-full md:w-[90%] flex justify-evenly bg-gray-900 mx-auto lg:py-[12%] py-[15%] md:flex-row flex-col overflow-hidden'>
-       <motion.div variants={fadeIn(3.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='md:w-1/4 w-full flex flex-col justify-evenly p-[1rem] lg:pb-0 pb-[15%]'>
-        <h1 className='mx-auto md:text-4xl sm:text-2xl  text-white txt text-lg'> Why we are different from others ?</h1>
-        <p className='md:text-2xl sm:text-lg text-sm text-gray-400 text-center'>
-            We offer extension, cross browser compatibility and so more.
+    <section className='w-full lg:w-[95%] flex mx-auto bg-gray-800 py-[7em] flex-col md:flex-row'>
+      <div className='flex flex-col w-[90%] md:w-[60%] mx-auto md:mx-0 text-center md:text-start md:pl-[1rem]'>
+      <h1 className='md:text-2xl text-xl text-white/70 font-[Poppins] font-bold'> Why we are different from others ?</h1>
+        <p className='text-md md:text-xl text-white/80 font-serif mt-[1rem]'>
+          We offer extension, cross browser compatibility and so more.
         </p>
-       </motion.div>
-       <div className='w-full lg:w-3/4 flex lg:flex-row flex-col justify-around lg:pb-0 pb-[15%]'>
-        <motion.div variants={fadeIn3(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col lg:w-[28%] w-[85%] bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mx-auto'>
-            <img src="./public/f1.png" alt="" className='w-[30%] lg:w-[85%] mx-auto flex'></img>
-            <p className="mt-[1rem] p-[2rem] text-md text-gray-100">
-               Cross Browser Compatibility ensures integration accross all platforms.
-            </p>
-
+      </div>
+      <div className='flex w-full md:w-[3/4] justify-around mx-auto flex-col md:flex-row'>
+        <motion.div className='flex flex-col mx-auto md:mx-0 justify-center mt-[2rem] h-[20rem] md:h-[25rem] w-[90%] md:w-[31%] bg-gray-500 p-[2rem] px-[3rem] rounded-3xl' variants={fadeIn(3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+          <img src='front4.jpeg' className="rounded-full md:w-[12rem] w-[10rem] mx-auto" alt="image1"></img>
+          <p className='text-md text-center mt-[1rem]'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quae aperiam reiciendis ullam, quidem modi?
+          </p>
+        </ motion.div>
+        <motion.div className='flex flex-col mx-auto md:mx-0 justify-center w-[90%] h-[20rem] md:h-[25rem] md:w-[31%] bg-gray-500 p-[2rem] px-[2rem] rounded-3xl mt-[2rem] md:mt-[5rem]' variants={fadeIn4(2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+          <img src='front.jpeg' className="rounded-full md:w-[15rem] w-[10rem] mx-auto" alt="image1"></img>
+          <p className='text-md text-center mt-[1rem]'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quae aperiam reiciendis ullam, quidem modi?
+          </p>
         </motion.div>
-        <motion.div variants={fadeIn(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}}  className='flex flex-col lg:w-[28%] w-[85%] bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mt-[2rem] mx-auto'>
-            <img src="./public/f1.png" alt="" className='w-[85%] mx-auto flex'></img>
-            <p className="mt-[1rem] p-[2rem] text-gray-100">
-                97% accuracy model to predict the data via integration with NLP.
-            </p>
-
+        <motion.div className='flex flex-col mx-auto md:mx-0 justify-center w-[90%] md:w-[31%] bg-gray-500 p-[2rem] px-[2rem] rounded-3xl h-[20rem] md:h-[25rem] mt-[2rem]' variants={fadeIn3(3)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+          <img src='front5.jpeg' className="rounded-full md:w-[15rem] w-[10rem] mx-auto" alt="image1"></img>
+          <p className='text-md text-center mt-[1rem]'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quae aperiam reiciendis ullam, quidem modi?
+          </p>
         </motion.div>
-        <motion.div variants={fadeIn3(4.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}}  className='flex flex-col lg:w-[28%] w-[85%] bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mx-auto mt-[2rem]'>
-            <img src="./public/f1.png" alt="" className='w-[85%] mx-auto flex'></img>
-            <p className="text-gray-100 mt-[1rem] p-[2rem]">
-               Specially resolving 23 dark patterns including popups.
-            </p>
-
-        </motion.div>
-
-       </div>
+      </div>
     </section>
   )
 }

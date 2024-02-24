@@ -1,38 +1,35 @@
-import React from 'react'
+import React from 'react';
+import { fadeIn, fadeIn2, fadeIn3 } from '../Motion/variants';
+import { motion } from 'framer-motion';
 
-const Fronter2 = () => {
+const Fronter = () => {
   return (
-    <section className='w-[95%] flex justify-around items-center mx-auto'>
-        <div className='w-1/4'>
-            <div className='flex flex-col justify-center'>
-                <h1 className=''>Why are we better than others ?</h1>
-                <p className=''>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-            </div>
-        </div>
-        <div className='w-[3/4] lg:w-3/4'>
-            <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-start md:gap-10 gap-8'>
-            <div className='bg-[rgba(255,255,255,0.04)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300'>
-                <div className='w-[full] h-[full] justify-center mx-auto'>
-                <img src="f1.png" className='w-[80%] mx-auto'></img>
-                <p className='mx-[1rem] text-white text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                </div>
-            </div>
-            <div className='bg-[rgba(255,255,255,0.04)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 md:mt-16'>
-                <div className=''>
-                <img src="f1.png" className='w-[80%]'></img>
-                <p className='mx-[1rem] text-white text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                </div>
-            </div>
-            <div className='bg-[rgba(255,255,255,0.04)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300'>
-                <div className=''>
-                <img src="f1.png" className='w-[80%]'></img>
-                <p className='mx-[1rem] text-white text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-                </div>
-            </div>
-            </div>
-        </div>
+    <section className='w-full md:w-[90%] flex justify-evenly bg-gray-900 mx-auto lg:py-[12%] py-[15%] md:flex-row flex-col overflow-hidden'>
+      <motion.div variants={fadeIn(3.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='md:w-1/4 w-full flex flex-col justify-evenly p-[1rem] lg:pb-0 pb-[15%]'>
+        
+      </motion.div>
+      <div className='w-full lg:w-3/4 flex lg:flex-row flex-col justify-around lg:pb-0 pb-[15%]'>
+        <motion.div variants={fadeIn3(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col lg:w-[28%] w-full bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mx-auto mt-[2rem] lg:mt-0'>
+          <img src="/f1.png" alt="" className='w-[30%] lg:w-[85%] mx-auto'></img>
+          <p className="mt-[1rem] p-[2rem] text-md text-gray-100">
+            Cross Browser Compatibility ensures integration across all platforms.
+          </p>
+        </motion.div>
+        <motion.div variants={fadeIn2(2.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col lg:w-[28%] w-full bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mt-[2rem] lg:mt-0'>
+          <img src="/f1.png" alt="" className='w-[85%] mx-auto'></img>
+          <p className="mt-[1rem] p-[2rem] text-gray-100">
+            97% accuracy model to predict the data via integration with NLP.
+          </p>
+        </motion.div>
+        <motion.div variants={fadeIn3(4.2)} initial="hidden" whileInView={"show"} viewport={{once: false, amount: 0.7}} className='flex flex-col lg:w-[28%] w-full bg-[rgba(254,253,253,0.09)] rounded-[35px] h-96 shadow-3xl p-8 items-center justify-center hover:-translate-y-4 transition-all duration-300 mx-auto mt-[2rem] lg:mt-0'>
+          <img src="/f1.png" alt="" className='w-[85%] mx-auto'></img>
+          <p className="text-gray-100 mt-[1rem] p-[2rem]">
+            Specially resolving 23 dark patterns including popups.
+          </p>
+        </motion.div>
+      </div>
     </section>
-  )
+  );
 }
 
-export default Fronter2
+export default Fronter;

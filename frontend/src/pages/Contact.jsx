@@ -3,15 +3,10 @@ import { useState } from "react";
 import {
   MdDriveFileRenameOutline,
   MdOutlineEmail,
-  MdOutlineFeedback,
 } from "react-icons/md";
 import { motion } from "framer-motion";
-import {
-  fadeIn,
-  fadeIn2,
-  fadeIn3,
-  fadeIn4,
-} from "../components/Motion/variants";
+import { fadeIn,fadeIn2,fadeIn3,fadeIn4,fadeOut } from "../components/Motion/variants";
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -28,118 +23,87 @@ const Contact = () => {
       },
     });
 
-    result = await result.json;
+    result = await result.json();
     localStorage.setItem("users", JSON.stringify(result));
   };
+
   return (
     <>
-      <section className="lg:w-[90%] bg-white border-red-800 flex justify-around mx-auto py-[5%] pb-[15%]">
-        <div className="w-full flex md:flex-row flex-col justify-around">
-          <div className="w-[1/2] flex flex-col justify-center mx-auto text-center">
-            <h1 className="text-lg font-bold font-mono mx-auto mt-[15%] md:mt-0">
-              {" "}
-              Do you know some webs using deceptive designs ?{" "}
-            </h1>
-            <span className="sm:text-lg mx-auto font-serif">
-              {" "}
-              Please fill the form to reach out to us.
-            </span>
-            <motion.img
-              variants={fadeIn2(2.2)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              src="./public/contact.jpg"
-              className="w-[50%] sm:w-[80%] h-[60%] mx-auto mt-[10%] mb-[10%] sm:mb-0"
-              alt="image"
-            />
-          </div>
-          <div className="sm:w-[1/2] flex justify-center my-auto py-[2rem] mx-auto">
-            <form className="" onSubmit={collectData}>
-              <motion.div
-                variants={fadeIn4(2.2)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.7 }}
-                className="flex flex-row justify-center mx-auto pb-[2rem]"
-              >
-                <MdDriveFileRenameOutline className="m-auto w-[3rem] bg-sky-50 h-[2rem] rounded-xl mr-[1rem]" />
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  autoComplete="off"
-                  placeholder="Enter your name"
-                  className="outline-none bg-sky-50 border border-spacing-5 w-[25rem] h-[3rem] rounded-xl px-[1rem] shadow-lg active:animate-bounce mx-auto"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                ></input>
-              </motion.div>
-              <motion.div
-                variants={fadeIn4(3.2)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.7 }}
-                className="flex flex-row justify-center items-center mx-auto pb-[2rem]"
-              >
-                <MdOutlineEmail className="m-auto w-[3rem] bg-sky-50 h-[2rem] rounded-xl mr-[1rem]" />
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  autoComplete="off"
-                  placeholder="Enter your email"
-                  className="outline-none bg-sky-50 border border-spacing-5 w-[25rem] h-[3rem] rounded-xl px-[1rem] shadow-lg active:animate-bounce"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                ></input>
-              </motion.div>
-              <motion.div
-                variants={fadeIn4(3.2)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.7 }}
-                className="flex flex-row justify-center items-center mx-auto pb-[2rem]"
-              >
-                <MdOutlineEmail className="m-auto w-[3rem] bg-sky-50 h-[2rem] rounded-xl mr-[1rem]" />
-                <input
-                  type="text"
-                  name="feed"
-                  id="feed"
-                  autoComplete="off"
-                  placeholder="Enter your feedback"
-                  className="outline-none bg-sky-50 border border-spacing-5 w-[25rem] h-[3rem] rounded-xl px-[1rem] shadow-lg active:animate-bounce"
-                  value={feed}
-                  onChange={(e) => setFeed(e.target.value)}
-                ></input>
-              </motion.div>
-              <motion.div
-                variants={fadeIn4(3.2)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.7 }}
-                className="flex flex-row justify-center items-center mx-auto pb-[2rem]"
-              >
-                <MdOutlineEmail className="m-auto w-[3rem] bg-sky-50 h-[2rem] rounded-xl mr-[1rem]" />
-                <input
-                  type="text"
-                  name="userurl"
-                  id="userurl"
-                  autoComplete="off"
-                  placeholder="Enter your url"
-                  className="outline-none bg-sky-50 border border-spacing-5 w-[25rem] h-[3rem] rounded-xl px-[1rem] shadow-lg active:animate-bounce"
-                  value={customurl}
-                  onChange={(e) => setCustomurl(e.target.value)}
-                ></input>
-              </motion.div>
-              <button
-                type="submit"
-                className="bg-orange-400 p-[0.5rem] px-[1rem] rounded-xl hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+      <section className="lg:w-[90%] bg-white border-red-800 flex flex-col lg:flex-row justify-around mx-auto py-10 lg:pb-20">
+        <div className="w-full lg:w-[50%] flex flex-col justify-center mx-auto text-center">
+          <h1 className="text-lg font-bold font-mono mt-10 lg:mt-0">
+            Do you know some websites using deceptive designs?
+          </h1>
+          <span className="text-base font-serif">
+            Please fill out the form to reach out to us.
+          </span>
+          <motion.img
+            src="./public/contact.jpg"
+            className="w-3/4 lg:w-5/6 mx-auto mt-10 mb-5 lg:mb-0"
+            alt="image" variants={fadeIn2(2.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}
+          />
+        </div>
+        <div className="w-full lg:w-[50%] flex justify-center my-auto py-8 lg:py-0">
+          <form className="w-5/6 lg:w-[70%] mx-auto" onSubmit={collectData}>
+            <motion.div className="flex flex-row items-center pb-4" variants={fadeIn4(2.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+              <MdDriveFileRenameOutline className="w-10 h-10 bg-sky-50 rounded-xl mr-3" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autoComplete="off"
+                placeholder="Enter your name"
+                className="outline-none bg-sky-50 border border-spacing-5 w-full h-10 lg:h-[3rem] rounded-xl px-3 shadow-lg active:animate-bounce"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </motion.div>
+            <motion.div className="flex flex-row items-center pb-4" variants={fadeIn2(2.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+              <MdOutlineEmail className="w-10 h-10 bg-sky-50 rounded-xl mr-3" />
+              <input
+                type="text"
+                name="email"
+                id="email"
+                autoComplete="off"
+                placeholder="Enter your email"
+                className="outline-none bg-sky-50 border border-spacing-5 w-full h-10 lg:h-[3rem] rounded-xl px-3 shadow-lg active:animate-bounce"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </motion.div>
+            <motion.div className="flex flex-row items-center pb-4" variants={fadeIn4(2.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+              <MdOutlineEmail className="w-10 h-10 bg-sky-50 rounded-xl mr-3" />
+              <input
+                type="text"
+                name="feed"
+                id="feed"
+                autoComplete="off"
+                placeholder="Enter your feedback"
+                className="outline-none bg-sky-50 border border-spacing-5 w-full h-10 lg:h-[3rem] rounded-xl px-3 shadow-lg active:animate-bounce"
+                value={feed}
+                onChange={(e) => setFeed(e.target.value)}
+              />
+            </motion.div>
+            <motion.div className="flex flex-row items-center pb-4" variants={fadeIn2(2.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}>
+              <MdOutlineEmail className="w-10 h-10 bg-sky-50 rounded-xl mr-3" />
+              <input
+                type="text"
+                name="userurl"
+                id="userurl"
+                autoComplete="off"
+                placeholder="Enter your URL"
+                className="outline-none bg-sky-50 border border-spacing-5 w-full h-10 lg:h-[3rem] rounded-xl px-3 shadow-lg active:animate-bounce"
+                value={customurl}
+                onChange={(e) => setCustomurl(e.target.value)}
+              />
+            </motion.div>
+            <motion.button
+              type="submit"
+              className="bg-orange-400 p-2 lg:p-3 rounded-xl hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white w-[5rem]" variants={fadeIn4(2.2)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.7 }}
+            >
+              Submit
+            </motion.button>
+          </form>
         </div>
       </section>
     </>
@@ -147,3 +111,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

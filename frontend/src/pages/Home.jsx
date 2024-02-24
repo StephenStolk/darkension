@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import Front from '../components/Home/Front'
 import Benefit from '../components/Home/Benefit'
@@ -13,7 +14,7 @@ const Home = () => {
       <Front />
       <Fronter />
       <Benefit />
-      <Launch />
+     <Launch />
       <Modelbar />
     </>
   )
