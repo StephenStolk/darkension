@@ -9,7 +9,7 @@ const DarkPattern2 = () => {
     const [datas,setDatas] = useState(data);
   return (
     <>
-        <motion.section className='sm:w-[90%] w-full flex justify-center mx-auto flex-col mt-[15%] md:mt-[5%] lg:mt-[2%] bg-gray-900 overflow-hidden'>
+        <motion.section className='sm:w-[90%] w-full flex justify-center mx-auto flex-col mt-[15%] md:mt-[5%] lg:mt-[2%] bg-gray-780 overflow-hidden'>
         {
             datas.map((cur) => {
                 const {name,id,desc} = cur;
